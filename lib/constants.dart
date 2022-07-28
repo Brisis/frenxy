@@ -16,3 +16,5 @@ PageTransition routeTransition(Widget screen) {
     duration: const Duration(),
   );
 }
+
+const double kBottomNavigationPadding = 5;
