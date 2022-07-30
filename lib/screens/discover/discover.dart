@@ -33,21 +33,22 @@ class DiscoverScreen extends StatelessWidget {
                 color: kTextGreyColor,
               ),
               decoration: InputDecoration(
-                  prefixIcon: Icon(
-                    Icons.search,
-                    color: kTextGreyColor,
-                    //size: 20,
-                  ),
+                prefixIcon: Icon(
+                  Icons.search,
+                  color: kTextGreyColor,
+                  //size: 20,
+                ),
 
-                  // suffixIcon: IconButton(
-                  //   icon: const Icon(Icons.clear),
-                  //   onPressed: () {
-                  //     /* Clear the search field */
-                  //   },
-                  // ),
+                // suffixIcon: IconButton(
+                //   icon: const Icon(Icons.clear),
+                //   onPressed: () {
+                //     /* Clear the search field */
+                //   },
+                // ),
 
-                  hintText: 'Search',
-                  border: InputBorder.none),
+                hintText: 'Search',
+                border: InputBorder.none,
+              ),
             ),
           ),
         ),

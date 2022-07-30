@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frenxy/screens/posts/post_item.dart';
+import 'package:frenxy/screens/posts/upload_choose_post_item.dart';
 import 'package:frenxy/widgets/single_post.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -94,6 +95,45 @@ List<PostItem> discoverPosts = [
   PostItem(
     postImage: "assets/images/post9.jpeg",
     postLikes: 430,
+    onTap: () {},
+  ),
+];
+
+List<PostsChooseUploadItem> choosePosts = [
+  PostsChooseUploadItem(
+    postImage: "assets/images/post1.webp",
+    onTap: () {},
+  ),
+  PostsChooseUploadItem(
+    postImage: "assets/images/post2.jpeg",
+    onTap: () {},
+  ),
+  PostsChooseUploadItem(
+    postImage: "assets/images/post3.webp",
+    onTap: () {},
+  ),
+  PostsChooseUploadItem(
+    postImage: "assets/images/post4.jpeg",
+    onTap: () {},
+  ),
+  PostsChooseUploadItem(
+    postImage: "assets/images/post5.jpeg",
+    onTap: () {},
+  ),
+  PostsChooseUploadItem(
+    postImage: "assets/images/post6.jpeg",
+    onTap: () {},
+  ),
+  PostsChooseUploadItem(
+    postImage: "assets/images/post7.jpeg",
+    onTap: () {},
+  ),
+  PostsChooseUploadItem(
+    postImage: "assets/images/post8.jpeg",
+    onTap: () {},
+  ),
+  PostsChooseUploadItem(
+    postImage: "assets/images/post9.jpeg",
     onTap: () {},
   ),
 ];

@@ -5,6 +5,7 @@ import 'package:frenxy/screens/home_screen.dart';
 import 'package:frenxy/screens/inbox/inbox_screen.dart';
 import 'package:frenxy/screens/me/profile_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:frenxy/screens/posts/screens/choose_upload.dart';
 import 'package:frenxy/widgets/bottom_navbar_item.dart';
 
 class BottomNavbarLight extends StatelessWidget {
@@ -62,54 +63,59 @@ class BottomNavbarLight extends StatelessWidget {
             ),
           ),
           horizontalSpace(width: 10),
-          Column(
-            children: [
-              Container(
-                height: 30,
-                padding: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  boxShadow: const [
-                    BoxShadow(
-                      offset: Offset(0, 0),
-                      color: Colors.red,
-                      blurRadius: 2.0,
-                      spreadRadius: 0.5,
-                    ),
-                    BoxShadow(
-                      offset: Offset(0, 0),
-                      color: Colors.blue,
-                      blurRadius: 2.0,
-                      spreadRadius: 0.5,
-                    ),
-                    BoxShadow(
-                      offset: Offset(0, 0),
-                      color: Colors.black,
-                      blurRadius: 2.0,
-                      spreadRadius: 0.1,
-                    )
-                  ],
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 3,
-                  ),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(routeTransition(const PostsChooseUpload()));
+            },
+            child: Column(
+              children: [
+                Container(
+                  height: 30,
+                  padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                    color: selectedColor,
-                    borderRadius: BorderRadius.circular(5),
+                    boxShadow: const [
+                      BoxShadow(
+                        offset: Offset(0, 0),
+                        color: Colors.red,
+                        blurRadius: 2.0,
+                        spreadRadius: 0.5,
+                      ),
+                      BoxShadow(
+                        offset: Offset(0, 0),
+                        color: Colors.blue,
+                        blurRadius: 2.0,
+                        spreadRadius: 0.5,
+                      ),
+                      BoxShadow(
+                        offset: Offset(0, 0),
+                        color: Colors.black,
+                        blurRadius: 2.0,
+                        spreadRadius: 0.1,
+                      )
+                    ],
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Center(
-                    child: SvgPicture.asset(
-                      'assets/icons/plus.svg',
-                      semanticsLabel: 'Add',
-                      color: Colors.white,
-                      width: 20,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 3,
+                    ),
+                    decoration: BoxDecoration(
+                      color: selectedColor,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: Center(
+                      child: SvgPicture.asset(
+                        'assets/icons/plus.svg',
+                        semanticsLabel: 'Add',
+                        color: Colors.white,
+                        width: 20,
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           horizontalSpace(width: 10),
           Expanded(
