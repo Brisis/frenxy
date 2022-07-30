@@ -3,8 +3,25 @@ import 'package:frenxy/constants.dart';
 import 'package:frenxy/widgets/custom_button.dart';
 import 'package:frenxy/widgets/custom_outlined_button.dart';
 
-class UserProfileDetailSection extends StatelessWidget {
-  const UserProfileDetailSection({Key? key}) : super(key: key);
+class ProfileDetailSection extends StatelessWidget {
+  final String image;
+  final String username;
+  final String bio;
+  final int following;
+  final int followers;
+  final int likes;
+  final bool isMe;
+
+  const ProfileDetailSection({
+    Key? key,
+    required this.username,
+    required this.bio,
+    required this.image,
+    required this.following,
+    required this.followers,
+    required this.likes,
+    this.isMe = true,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,14 +41,14 @@ class UserProfileDetailSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CircleAvatar(
-              backgroundImage: AssetImage("assets/images/girl1.jpeg"),
+              backgroundImage: AssetImage(image),
               radius: 50,
             ),
             verticalSpace(),
-            const Text(
-              "@frenxy",
-              style: TextStyle(
-                fontSize: 13,
+            Text(
+              "@$username",
+              style: const TextStyle(
+                fontSize: kHeaderTextSize,
                 color: Colors.black,
                 fontWeight: FontWeight.w500,
               ),
@@ -41,19 +58,19 @@ class UserProfileDetailSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Column(
-                  children: const [
+                  children: [
                     Text(
-                      "0",
-                      style: TextStyle(
-                        fontSize: 15,
+                      "$following",
+                      style: const TextStyle(
+                        fontSize: kSubHeaderTextSize,
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Following",
                       style: TextStyle(
-                        fontSize: 11,
+                        fontSize: kSmallTextSize,
                         color: Colors.black54,
                       ),
                     ),
@@ -61,19 +78,19 @@ class UserProfileDetailSection extends StatelessWidget {
                 ),
                 horizontalSpace(width: 30),
                 Column(
-                  children: const [
+                  children: [
                     Text(
-                      "130.7k",
-                      style: TextStyle(
-                        fontSize: 15,
+                      "$followers",
+                      style: const TextStyle(
+                        fontSize: kSubHeaderTextSize,
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Followers",
                       style: TextStyle(
-                        fontSize: 11,
+                        fontSize: kSmallTextSize,
                         color: Colors.black54,
                       ),
                     ),
@@ -81,19 +98,19 @@ class UserProfileDetailSection extends StatelessWidget {
                 ),
                 horizontalSpace(width: 30),
                 Column(
-                  children: const [
+                  children: [
                     Text(
-                      "1.4m",
-                      style: TextStyle(
-                        fontSize: 15,
+                      "$likes",
+                      style: const TextStyle(
+                        fontSize: kSubHeaderTextSize,
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Likes",
                       style: TextStyle(
-                        fontSize: 11,
+                        fontSize: kSmallTextSize,
                         color: Colors.black54,
                       ),
                     ),
@@ -101,27 +118,31 @@ class UserProfileDetailSection extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
-              height: 10,
-            ),
+            verticalSpace(height: 10),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 50.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Expanded(
-                    child: CustomButton(title: "Follow"),
+                    child: isMe
+                        ? CustomOutlinedButton(
+                            onPressed: () {},
+                            title: "Edit profile",
+                          )
+                        : CustomButton(
+                            onPressed: () {},
+                            title: "Follow",
+                          ),
                   ),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            const Text(
-              "Model & Influencer",
-              style: TextStyle(
-                fontSize: 13,
+            verticalSpace(height: 10),
+            Text(
+              bio,
+              style: const TextStyle(
+                fontSize: kNormalTextSize,
                 color: Colors.black,
                 fontWeight: FontWeight.w500,
               ),

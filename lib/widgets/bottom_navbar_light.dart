@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:frenxy/constants.dart';
 import 'package:frenxy/screens/discover/discover.dart';
 import 'package:frenxy/screens/home_screen.dart';
+import 'package:frenxy/screens/inbox/inbox_screen.dart';
 import 'package:frenxy/screens/me/profile_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:frenxy/widgets/bottom_navbar_item.dart';
@@ -119,7 +120,7 @@ class BottomNavbarLight extends StatelessWidget {
               unSelectedColor: unSelectedColor,
               selectedColor: selectedColor,
               onTap: () {
-                //Navigator.of(context).push(routeTransition(const HomeScreen()));
+                Navigator.of(context).push(routeTransition(const InboxScreen()));
               },
               isActive: currentIndex == 2,
             ),

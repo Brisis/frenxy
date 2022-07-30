@@ -38,7 +38,7 @@ class SinglePost extends StatelessWidget {
                   const Text(
                     "Following",
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: kSubHeaderTextSize,
                       color: Colors.grey,
                       fontWeight: FontWeight.w500,
                     ),
@@ -57,7 +57,7 @@ class SinglePost extends StatelessWidget {
                   const Text(
                     "For You",
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: kHeaderTextSize,
                       color: Colors.white,
                       fontWeight: FontWeight.w500,
                     ),
@@ -76,7 +76,7 @@ class SinglePost extends StatelessWidget {
                         Text(
                           "@$username",
                           style: const TextStyle(
-                            fontSize: 13,
+                            fontSize: kSubHeaderTextSize,
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
@@ -88,7 +88,7 @@ class SinglePost extends StatelessWidget {
                           "Start with God - the first step in learning is bowing down to God; only fools thumb their noses at such wisdom and learning.",
                           style: TextStyle(
                             height: 1.4,
-                            fontSize: 13,
+                            fontSize: kSubHeaderTextSize,
                             color: Colors.white,
                             fontWeight: FontWeight.w500,
                           ),
@@ -107,7 +107,7 @@ class SinglePost extends StatelessWidget {
                             Text(
                               "original sound - $username",
                               style: const TextStyle(
-                                fontSize: 13,
+                                fontSize: kNormalTextSize,
                                 color: Colors.white,
                               ),
                             ),
@@ -139,7 +139,7 @@ class SinglePost extends StatelessWidget {
                           Text(
                             "12.3K",
                             style: TextStyle(
-                              fontSize: 10,
+                              fontSize: kSmallTextSize,
                               color: Colors.white,
                               fontWeight: FontWeight.w500,
                             ),
@@ -163,7 +163,7 @@ class SinglePost extends StatelessWidget {
                           Text(
                             "918",
                             style: TextStyle(
-                              fontSize: 10,
+                              fontSize: kSmallTextSize,
                               color: Colors.white,
                               fontWeight: FontWeight.w500,
                             ),
@@ -191,7 +191,7 @@ class SinglePost extends StatelessWidget {
                           const Text(
                             "1023",
                             style: TextStyle(
-                              fontSize: 10,
+                              fontSize: kSmallTextSize,
                               color: Colors.white,
                               fontWeight: FontWeight.w500,
                             ),

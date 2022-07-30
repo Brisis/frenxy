@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:frenxy/constants.dart';
 import 'package:frenxy/screens/home_screen.dart';
 import 'package:frenxy/screens/posts/posts.dart';
-import 'package:frenxy/screens/me/profile_detail.section.dart';
 import 'package:frenxy/widgets/bottom_navbar_light.dart';
+import 'package:frenxy/widgets/profile_detail.section.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -46,7 +46,14 @@ class ProfileScreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          const ProfileDetailSection(),
+          const ProfileDetailSection(
+            username: "benevolentmudzinganyama",
+            bio: "Tech Serial Entreprenuer",
+            image: "assets/images/ben.jpeg",
+            following: 455,
+            followers: 1098,
+            likes: 5004,
+          ),
           const ProfilePosts(),
           verticalSpace(),
           Row(

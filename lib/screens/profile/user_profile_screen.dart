@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:frenxy/constants.dart';
 import 'package:frenxy/screens/home_screen.dart';
 import 'package:frenxy/screens/posts/posts.dart';
-import 'package:frenxy/screens/profile/user_profile_detail_section.dart';
-import 'package:frenxy/widgets/custom_button.dart';
+import 'package:frenxy/widgets/profile_detail.section.dart';
 
 class UserProfileScreen extends StatelessWidget {
   const UserProfileScreen({Key? key}) : super(key: key);
@@ -47,7 +46,15 @@ class UserProfileScreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          const UserProfileDetailSection(),
+          const ProfileDetailSection(
+            username: "frenxy",
+            bio: "Model & Influencer",
+            image: "assets/images/girl1.jpeg",
+            following: 12,
+            followers: 324,
+            likes: 890,
+            isMe: false,
+          ),
           const ProfilePosts(),
           verticalSpace(),
           Row(

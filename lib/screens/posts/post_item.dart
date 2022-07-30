@@ -43,7 +43,7 @@ class PostItem extends StatelessWidget {
                   Text(
                     "$postLikes",
                     style: const TextStyle(
-                      fontSize: 13,
+                      fontSize: kNormalTextSize,
                       color: Colors.white,
                       fontWeight: FontWeight.w500,
                     ),

@@ -26,7 +26,7 @@ class DiscoverTrendItemHeader extends StatelessWidget {
                   child: Text(
                     "#",
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: kHeaderTextSize,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                     ),
@@ -41,7 +41,7 @@ class DiscoverTrendItemHeader extends StatelessWidget {
                   const Text(
                     "latenightsnack",
                     style: TextStyle(
-                      fontSize: 13,
+                      fontSize: kNormalTextSize,
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
                     ),
@@ -49,7 +49,7 @@ class DiscoverTrendItemHeader extends StatelessWidget {
                   Text(
                     "Trending hashtag",
                     style: TextStyle(
-                      fontSize: 11,
+                      fontSize: kSmallTextSize,
                       color: kTextGreyColor,
                       fontWeight: FontWeight.w400,
                     ),
@@ -68,7 +68,7 @@ class DiscoverTrendItemHeader extends StatelessWidget {
               Text(
                 "173.5K",
                 style: TextStyle(
-                  fontSize: 12,
+                  fontSize: kNormalTextSize,
                   color: Colors.black,
                   fontWeight: FontWeight.w500,
                 ),

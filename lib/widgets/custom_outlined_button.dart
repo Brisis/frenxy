@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:frenxy/constants.dart';
 
 class CustomOutlinedButton extends StatelessWidget {
   final Function()? onPressed;
   final String title;
   final Color? color;
+  final double? padding;
+  final double? fontSize;
 
   const CustomOutlinedButton({
     Key? key,
     this.onPressed,
     required this.title,
     this.color,
+    this.padding,
+    this.fontSize,
   }) : super(key: key);
 
   @override
@@ -22,7 +27,7 @@ class CustomOutlinedButton extends StatelessWidget {
           Colors.white,
         ),
         padding: MaterialStateProperty.all(
-          const EdgeInsets.all(13),
+          EdgeInsets.all(padding ?? 13),
         ),
         shape: MaterialStateProperty.all(
           RoundedRectangleBorder(
@@ -33,8 +38,8 @@ class CustomOutlinedButton extends StatelessWidget {
       ),
       child: Text(
         title,
-        style: const TextStyle(
-          fontSize: 15,
+        style: TextStyle(
+          fontSize: fontSize ?? kHeaderTextSize,
           color: Colors.black,
           fontWeight: FontWeight.w500,
         ),

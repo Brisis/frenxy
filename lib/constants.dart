@@ -3,6 +3,12 @@ import 'package:frenxy/screens/posts/post_item.dart';
 import 'package:frenxy/widgets/single_post.dart';
 import 'package:page_transition/page_transition.dart';
 
+const double kExtraSmallTextSize = 10.0;
+const double kSmallTextSize = 11.0;
+const double kNormalTextSize = 12.0;
+const double kSubHeaderTextSize = 13.0;
+const double kHeaderTextSize = 15.0;
+
 SizedBox verticalSpace({double height = 8.0}) {
   return SizedBox(height: height);
 }
@@ -21,6 +27,7 @@ PageTransition routeTransition(Widget screen) {
 
 const double kBottomNavigationPadding = 5;
 
+Color primaryColor = Colors.black;
 Color dividerColor = Colors.grey.shade300;
 Color kTextGreyColor = Colors.black54;
 

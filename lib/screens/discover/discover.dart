@@ -25,8 +25,10 @@ class DiscoverScreen extends StatelessWidget {
           ),
           child: Center(
             child: TextField(
+              textAlign: TextAlign.justify,
+              textAlignVertical: TextAlignVertical.center,
               style: TextStyle(
-                fontSize: 15,
+                fontSize: kHeaderTextSize,
                 fontWeight: FontWeight.w500,
                 color: kTextGreyColor,
               ),
@@ -34,6 +36,7 @@ class DiscoverScreen extends StatelessWidget {
                   prefixIcon: Icon(
                     Icons.search,
                     color: kTextGreyColor,
+                    //size: 20,
                   ),
 
                   // suffixIcon: IconButton(
