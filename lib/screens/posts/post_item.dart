@@ -6,11 +6,13 @@ class PostItem extends StatelessWidget {
   final String postImage;
   final int postLikes;
   final Function()? onTap;
+  final bool visibleLikesCount;
   const PostItem({
     Key? key,
     required this.postImage,
     required this.postLikes,
     this.onTap,
+    this.visibleLikesCount = true,
   }) : super(key: key);
 
   @override
@@ -26,33 +28,35 @@ class PostItem extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
+        child: visibleLikesCount
+            ? Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Icon(
-                    CupertinoIcons.heart_fill,
-                    color: Colors.white,
-                    size: 15,
-                  ),
-                  horizontalSpace(),
-                  Text(
-                    "$postLikes",
-                    style: const TextStyle(
-                      fontSize: kNormalTextSize,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        const Icon(
+                          CupertinoIcons.heart_fill,
+                          color: Colors.white,
+                          size: 15,
+                        ),
+                        horizontalSpace(),
+                        Text(
+                          "$postLikes",
+                          style: const TextStyle(
+                            fontSize: kNormalTextSize,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
+                  )
                 ],
-              ),
-            )
-          ],
-        ),
+              )
+            : const SizedBox.shrink(),
       ),
     );
   }

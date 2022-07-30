@@ -90,7 +90,6 @@ class SinglePost extends StatelessWidget {
                             height: 1.4,
                             fontSize: kSubHeaderTextSize,
                             color: Colors.white,
-                            fontWeight: FontWeight.w500,
                           ),
                         ),
                         const SizedBox(

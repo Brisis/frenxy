@@ -1,7 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frenxy/constants.dart';
-import 'package:frenxy/screens/inbox/widgets/inbox_tile_item.dart';
+import 'package:frenxy/screens/inbox/components/inbox_all_activity.dart';
+import 'package:frenxy/screens/inbox/components/inbox_comments.dart';
+import 'package:frenxy/screens/inbox/components/inbox_followers.dart';
+import 'package:frenxy/screens/inbox/components/inbox_likes.dart';
+import 'package:frenxy/screens/inbox/components/inbox_mentions.dart';
+import 'package:frenxy/screens/inbox/direct_messages_screen.dart';
 
 import 'package:frenxy/widgets/bottom_navbar_light.dart';
 
@@ -66,7 +71,9 @@ class _InboxScreenState extends State<InboxScreen> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(routeTransition(const InboxDirectMessages()));
+            },
             icon: Icon(
               Icons.email_outlined,
               color: primaryColor,
@@ -76,63 +83,7 @@ class _InboxScreenState extends State<InboxScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: ListView(
-          children: [
-            Text(
-              "New",
-              style: TextStyle(
-                fontSize: kSubHeaderTextSize,
-                color: kTextGreyColor,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            verticalSpace(),
-            const InboxTileItem(
-              username: "moyondizvo",
-              image: "assets/images/bros.png",
-            ),
-            verticalSpace(height: 20),
-            const InboxTileItem(
-              username: "benevolentmudzinganyama",
-              image: "assets/images/ben.jpeg",
-            ),
-            verticalSpace(height: 20),
-            const InboxTileItem(
-              username: "murozvi",
-            ),
-            verticalSpace(height: 20),
-            Divider(
-              color: dividerColor,
-              height: 20,
-            ),
-            Text(
-              "Old",
-              style: TextStyle(
-                fontSize: kSubHeaderTextSize,
-                color: kTextGreyColor,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            verticalSpace(),
-            const InboxTileItem(
-              username: "foodworld",
-              image: "assets/images/food.png",
-            ),
-            verticalSpace(height: 20),
-            const InboxTileItem(
-              username: "benbris",
-              image: "assets/images/ben.jpeg",
-            ),
-            verticalSpace(height: 20),
-            const InboxTileItem(
-              username: "murozvimukuru",
-            ),
-            verticalSpace(height: 20),
-            Divider(
-              color: dividerColor,
-            ),
-          ],
-        ),
+        child: getCurrentComponent(),
       ),
       bottomNavigationBar: const BottomNavbarLight(
         backgroundColor: Colors.white,
@@ -140,4 +91,29 @@ class _InboxScreenState extends State<InboxScreen> {
       ),
     );
   }
+
+  Widget getCurrentComponent() {
+    switch (dropdownvalue) {
+      case "All activity":
+        return const InboxAllActivityComponent();
+      case "Likes":
+        return const InboxLikesComponent();
+      case "Comments":
+        return const InboxCommentsComponent();
+      case "Mentions":
+        return const InboxMentionsComponent();
+      case "Followers":
+        return const InboxFollowersComponent();
+      default:
+        return const InboxAllActivityComponent();
+    }
+  }
+}
+
+enum CurrentDropItem {
+  allactivity,
+  likes,
+  comments,
+  mentions,
+  followers,
 }
