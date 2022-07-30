@@ -1,11 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frenxy/constants.dart';
 import 'package:frenxy/screens/home_screen.dart';
 import 'package:frenxy/screens/posts/posts.dart';
 import 'package:frenxy/screens/me/profile_detail.section.dart';
-import 'package:frenxy/widgets/bottom_navbar.dart';
-import 'package:frenxy/widgets/custom_button.dart';
+import 'package:frenxy/widgets/bottom_navbar_light.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -78,7 +76,10 @@ class ProfileScreen extends StatelessWidget {
           verticalSpace(),
         ],
       ),
-      bottomNavigationBar: const BottomNavbar(),
+      bottomNavigationBar: const BottomNavbarLight(
+        backgroundColor: Colors.white,
+        currentIndex: 3,
+      ),
     );
   }
 }

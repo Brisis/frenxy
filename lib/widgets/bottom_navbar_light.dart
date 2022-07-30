@@ -6,10 +6,10 @@ import 'package:frenxy/screens/me/profile_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:frenxy/widgets/bottom_navbar_item.dart';
 
-class BottomNavbar extends StatelessWidget {
+class BottomNavbarLight extends StatelessWidget {
   final Color? backgroundColor;
   final int? currentIndex;
-  const BottomNavbar({
+  const BottomNavbarLight({
     Key? key,
     this.backgroundColor,
     this.currentIndex = 0,
@@ -17,8 +17,8 @@ class BottomNavbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color unSelectedColor = Colors.grey.shade200;
-    Color selectedColor = Colors.white;
+    Color unSelectedColor = kTextGreyColor;
+    Color selectedColor = Colors.black;
     return Container(
       constraints: const BoxConstraints(
         maxHeight: 50,
@@ -26,9 +26,9 @@ class BottomNavbar extends StatelessWidget {
       padding: const EdgeInsets.only(top: 10),
       decoration: BoxDecoration(
         border: Border(
-          top: BorderSide(color: dividerColor, width: 0.1),
+          top: BorderSide(color: dividerColor, width: 0.5),
         ),
-        color: backgroundColor ?? Colors.black,
+        color: Colors.white,
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -76,19 +76,13 @@ class BottomNavbar extends StatelessWidget {
                     ),
                     BoxShadow(
                       offset: Offset(0, 0),
-                      color: Colors.orange,
-                      blurRadius: 2.0,
-                      spreadRadius: 0.5,
-                    ),
-                    BoxShadow(
-                      offset: Offset(0, 0),
                       color: Colors.blue,
                       blurRadius: 2.0,
                       spreadRadius: 0.5,
                     ),
                     BoxShadow(
                       offset: Offset(0, 0),
-                      color: Colors.white54,
+                      color: Colors.black,
                       blurRadius: 2.0,
                       spreadRadius: 0.1,
                     )
@@ -108,7 +102,7 @@ class BottomNavbar extends StatelessWidget {
                     child: SvgPicture.asset(
                       'assets/icons/plus.svg',
                       semanticsLabel: 'Add',
-                      color: Colors.black,
+                      color: Colors.white,
                       width: 20,
                     ),
                   ),

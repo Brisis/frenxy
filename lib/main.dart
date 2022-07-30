@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.blueAccent,
-        fontFamily: 'Futura',
+        fontFamily: 'Montserrat',
       ),
       home: const HomeScreen(),
     );

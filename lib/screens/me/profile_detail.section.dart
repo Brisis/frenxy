@@ -24,14 +24,14 @@ class ProfileDetailSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CircleAvatar(
-              backgroundImage: AssetImage("assets/images/bb.jpeg"),
+              backgroundImage: AssetImage("assets/images/ben.jpeg"),
               radius: 50,
             ),
             verticalSpace(),
             const Text(
               "@benevolentmudzinganyama",
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 13,
                 color: Colors.black,
                 fontWeight: FontWeight.w500,
               ),
@@ -53,7 +53,7 @@ class ProfileDetailSection extends StatelessWidget {
                     Text(
                       "Following",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 11,
                         color: Colors.black54,
                       ),
                     ),
@@ -73,7 +73,7 @@ class ProfileDetailSection extends StatelessWidget {
                     Text(
                       "Followers",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 11,
                         color: Colors.black54,
                       ),
                     ),
@@ -93,7 +93,7 @@ class ProfileDetailSection extends StatelessWidget {
                     Text(
                       "Likes",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 11,
                         color: Colors.black54,
                       ),
                     ),
@@ -121,9 +121,9 @@ class ProfileDetailSection extends StatelessWidget {
               height: 10,
             ),
             const Text(
-              "We build digital products.",
+              "Tech Serial Entreprenuer",
               style: TextStyle(
-                fontSize: 15,
+                fontSize: 13,
                 color: Colors.black,
                 fontWeight: FontWeight.w500,
               ),

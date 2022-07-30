@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:frenxy/constants.dart';
 import 'package:frenxy/helpers/tiktok_scroll.dart';
 import 'package:frenxy/widgets/bottom_navbar.dart';
-import 'package:frenxy/widgets/single_post.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,25 +11,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<SinglePost> posts = const [
-    SinglePost(
-      username: "frenxy",
-      postImage: "assets/images/girl1.jpeg",
-    ),
-    SinglePost(
-      username: "ben",
-      postImage: "assets/images/girl4.jpeg",
-    ),
-    SinglePost(
-      username: "esykomichi",
-      postImage: "assets/images/esy.jpg",
-    ),
-    SinglePost(
-      username: "advocate",
-      postImage: "assets/images/car.webp",
-    ),
-  ];
-
   @override
   Widget build(BuildContext context) {
     final Controller controller = Controller()

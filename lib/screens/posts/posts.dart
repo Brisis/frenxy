@@ -18,36 +18,61 @@ class ProfilePosts extends StatelessWidget {
         //   ),
         // ),
         // verticalSpace(height: 10),
-        Row(
-          children: [
-            Expanded(
-              child: PostItem(),
-            ),
-            horizontalSpace(width: 1),
-            Expanded(
-              child: PostItem(),
-            ),
-            horizontalSpace(width: 1),
-            Expanded(
-              child: PostItem(),
-            ),
-          ],
+        SizedBox(
+          height: 150,
+          child: Row(
+            children: [
+              Expanded(
+                child: discoverPosts[0],
+              ),
+              horizontalSpace(width: 1),
+              Expanded(
+                child: discoverPosts[1],
+              ),
+              horizontalSpace(width: 1),
+              Expanded(
+                child: discoverPosts[2],
+              ),
+            ],
+          ),
         ),
         verticalSpace(height: 1),
-        Row(
-          children: [
-            Expanded(
-              child: PostItem(),
-            ),
-            horizontalSpace(width: 1),
-            Expanded(
-              child: PostItem(),
-            ),
-            horizontalSpace(width: 1),
-            Expanded(
-              child: PostItem(),
-            ),
-          ],
+        SizedBox(
+          height: 150,
+          child: Row(
+            children: [
+              Expanded(
+                child: discoverPosts[3],
+              ),
+              horizontalSpace(width: 1),
+              Expanded(
+                child: discoverPosts[4],
+              ),
+              horizontalSpace(width: 1),
+              Expanded(
+                child: discoverPosts[5],
+              ),
+            ],
+          ),
+        ),
+        verticalSpace(height: 1),
+        SizedBox(
+          height: 150,
+          child: Row(
+            children: [
+              Expanded(
+                child: discoverPosts[6],
+              ),
+              horizontalSpace(width: 1),
+              Expanded(
+                child: discoverPosts[7],
+              ),
+              horizontalSpace(width: 1),
+              Expanded(
+                child: discoverPosts[8],
+              ),
+            ],
+          ),
         ),
       ],
     );

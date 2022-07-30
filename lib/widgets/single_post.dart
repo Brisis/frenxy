@@ -38,9 +38,9 @@ class SinglePost extends StatelessWidget {
                   const Text(
                     "Following",
                     style: TextStyle(
-                      fontSize: 13,
+                      fontSize: 14,
                       color: Colors.grey,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   const SizedBox(
@@ -57,9 +57,9 @@ class SinglePost extends StatelessWidget {
                   const Text(
                     "For You",
                     style: TextStyle(
-                      fontSize: 13,
+                      fontSize: 15,
                       color: Colors.white,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
@@ -85,10 +85,12 @@ class SinglePost extends StatelessWidget {
                           height: 10,
                         ),
                         const Text(
-                          "Watch me create another fuckup app and trap ama 2000 lol",
+                          "Start with God - the first step in learning is bowing down to God; only fools thumb their noses at such wisdom and learning.",
                           style: TextStyle(
-                            fontSize: 14,
+                            height: 1.4,
+                            fontSize: 13,
                             color: Colors.white,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                         const SizedBox(
@@ -114,9 +116,7 @@ class SinglePost extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(
-                    width: 50,
-                  ),
+                  horizontalSpace(width: 40),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -141,7 +141,7 @@ class SinglePost extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 10,
                               color: Colors.white,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ],
@@ -165,7 +165,7 @@ class SinglePost extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 10,
                               color: Colors.white,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ],
@@ -193,7 +193,7 @@ class SinglePost extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 10,
                               color: Colors.white,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ],

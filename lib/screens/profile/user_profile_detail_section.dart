@@ -31,7 +31,7 @@ class UserProfileDetailSection extends StatelessWidget {
             const Text(
               "@frenxy",
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 13,
                 color: Colors.black,
                 fontWeight: FontWeight.w500,
               ),
@@ -53,7 +53,7 @@ class UserProfileDetailSection extends StatelessWidget {
                     Text(
                       "Following",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 11,
                         color: Colors.black54,
                       ),
                     ),
@@ -73,7 +73,7 @@ class UserProfileDetailSection extends StatelessWidget {
                     Text(
                       "Followers",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 11,
                         color: Colors.black54,
                       ),
                     ),
@@ -93,7 +93,7 @@ class UserProfileDetailSection extends StatelessWidget {
                     Text(
                       "Likes",
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 11,
                         color: Colors.black54,
                       ),
                     ),
@@ -119,9 +119,9 @@ class UserProfileDetailSection extends StatelessWidget {
               height: 10,
             ),
             const Text(
-              "We build digital products.",
+              "Model & Influencer",
               style: TextStyle(
-                fontSize: 15,
+                fontSize: 13,
                 color: Colors.black,
                 fontWeight: FontWeight.w500,
               ),
