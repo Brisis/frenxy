@@ -28,7 +28,7 @@ class ProfileScreen extends StatelessWidget {
           child: Text(
             "Benevolent Mudzinganyama",
             style: TextStyle(
-              fontSize: 13,
+              fontSize: kSubHeaderTextSize,
               color: Colors.black,
               fontWeight: FontWeight.bold,
             ),

@@ -28,7 +28,7 @@ class UserProfileScreen extends StatelessWidget {
           child: Text(
             "Frenxy",
             style: TextStyle(
-              fontSize: 13,
+              fontSize: kSubHeaderTextSize,
               color: Colors.black,
               fontWeight: FontWeight.bold,
             ),

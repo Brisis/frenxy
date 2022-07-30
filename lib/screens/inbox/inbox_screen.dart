@@ -54,9 +54,9 @@ class _InboxScreenState extends State<InboxScreen> {
                   child: Text(
                     item,
                     style: const TextStyle(
-                      fontSize: kHeaderTextSize,
+                      fontSize: kSubHeaderTextSize,
                       color: Colors.black,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 );
