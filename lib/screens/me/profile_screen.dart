@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:frenxy/constants.dart';
 import 'package:frenxy/screens/home_screen.dart';
 import 'package:frenxy/screens/posts/posts.dart';
+import 'package:frenxy/screens/settings/settings_screen.dart';
 import 'package:frenxy/widgets/bottom_navbar_light.dart';
 import 'package:frenxy/widgets/profile_detail.section.dart';
 
@@ -36,9 +37,11 @@ class ProfileScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(routeTransition(const SettingsScreen()));
+            },
             icon: const Icon(
-              Icons.more_horiz_outlined,
+              Icons.more_vert,
               color: Colors.black,
             ),
           ),

@@ -38,7 +38,7 @@ class UserProfileScreen extends StatelessWidget {
           IconButton(
             onPressed: () {},
             icon: const Icon(
-              Icons.more_horiz_outlined,
+              Icons.more_vert,
               color: Colors.black,
             ),
           ),

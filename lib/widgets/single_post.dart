@@ -26,7 +26,7 @@ class SinglePost extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
             Padding(
@@ -90,6 +90,7 @@ class SinglePost extends StatelessWidget {
                             height: 1.4,
                             fontSize: kSubHeaderTextSize,
                             color: Colors.white,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                         const SizedBox(
@@ -108,6 +109,7 @@ class SinglePost extends StatelessWidget {
                               style: const TextStyle(
                                 fontSize: kNormalTextSize,
                                 color: Colors.white,
+                                fontWeight: FontWeight.w500,
                               ),
                             ),
                           ],
@@ -122,7 +124,7 @@ class SinglePost extends StatelessWidget {
                     children: [
                       const FollowAccountImage(),
                       const SizedBox(
-                        height: 20,
+                        height: 15,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -130,7 +132,7 @@ class SinglePost extends StatelessWidget {
                           Icon(
                             CupertinoIcons.heart_fill,
                             color: Colors.white,
-                            size: 35,
+                            size: 40,
                           ),
                           SizedBox(
                             height: 8,
@@ -140,13 +142,13 @@ class SinglePost extends StatelessWidget {
                             style: TextStyle(
                               fontSize: kSmallTextSize,
                               color: Colors.white,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                         ],
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 15,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -154,7 +156,7 @@ class SinglePost extends StatelessWidget {
                           Icon(
                             CupertinoIcons.chat_bubble_text_fill,
                             color: Colors.white,
-                            size: 35,
+                            size: 40,
                           ),
                           SizedBox(
                             height: 8,
@@ -164,13 +166,13 @@ class SinglePost extends StatelessWidget {
                             style: TextStyle(
                               fontSize: kSmallTextSize,
                               color: Colors.white,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                         ],
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 15,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -181,7 +183,7 @@ class SinglePost extends StatelessWidget {
                             child: const Icon(
                               Icons.reply,
                               color: Colors.white,
-                              size: 35,
+                              size: 40,
                             ),
                           ),
                           const SizedBox(
@@ -192,7 +194,7 @@ class SinglePost extends StatelessWidget {
                             style: TextStyle(
                               fontSize: kSmallTextSize,
                               color: Colors.white,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                         ],
