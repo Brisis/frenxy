@@ -29,8 +29,10 @@ PageTransition routeTransition(Widget screen) {
 const double kBottomNavigationPadding = 5;
 
 Color primaryColor = Colors.black;
+Color secondaryColor = Colors.red;
 Color dividerColor = Colors.grey.shade300;
 Color kTextGreyColor = Colors.black54;
+Color kWhiteColor = Colors.white;
 
 List<SinglePost> posts = const [
   SinglePost(

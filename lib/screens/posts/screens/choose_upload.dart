@@ -17,10 +17,10 @@ class PostsChooseUpload extends StatelessWidget {
           elevation: 0.5,
           leading: IconButton(
             onPressed: () {
-              Navigator.of(context).push(routeTransition(const HomeScreen()));
+              Navigator.of(context).pop();
             },
             icon: const Icon(
-              Icons.close,
+              Icons.arrow_back,
               color: Colors.black,
             ),
           ),

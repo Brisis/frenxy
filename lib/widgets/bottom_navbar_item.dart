@@ -23,9 +23,11 @@ class CustomBottomNavbarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Column(
+    return IconButton(
+      splashRadius: 1.0,
+      padding: EdgeInsets.zero,
+      onPressed: onTap,
+      icon: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SvgPicture.asset(

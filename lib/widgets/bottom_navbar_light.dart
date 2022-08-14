@@ -5,7 +5,7 @@ import 'package:frenxy/screens/home_screen.dart';
 import 'package:frenxy/screens/inbox/inbox_screen.dart';
 import 'package:frenxy/screens/me/profile_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:frenxy/screens/posts/screens/choose_upload.dart';
+import 'package:frenxy/screens/posts/posts_screen.dart';
 import 'package:frenxy/widgets/bottom_navbar_item.dart';
 
 class BottomNavbarLight extends StatelessWidget {
@@ -65,7 +65,7 @@ class BottomNavbarLight extends StatelessWidget {
           horizontalSpace(width: 10),
           GestureDetector(
             onTap: () {
-              Navigator.of(context).push(routeTransition(const PostsChooseUpload()));
+              Navigator.of(context).push(routeTransition(const MakePostScreen()));
             },
             child: Column(
               children: [
