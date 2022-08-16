@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:frenxy/constants.dart';
 import 'package:frenxy/screens/home_screen.dart';
@@ -8,7 +6,11 @@ import 'package:frenxy/widgets/custom_button.dart';
 import 'package:frenxy/widgets/custom_outlined_button.dart';
 
 class PostsSubmitUpload extends StatelessWidget {
-  const PostsSubmitUpload({Key? key}) : super(key: key);
+  final String filePath;
+  const PostsSubmitUpload({
+    Key? key,
+    required this.filePath,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

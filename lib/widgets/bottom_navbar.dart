@@ -5,7 +5,7 @@ import 'package:frenxy/screens/home_screen.dart';
 import 'package:frenxy/screens/inbox/inbox_screen.dart';
 import 'package:frenxy/screens/me/profile_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:frenxy/screens/posts/posts_screen.dart';
+import 'package:frenxy/screens/upload/camera/posts_camera_screen.dart';
 import 'package:frenxy/widgets/bottom_navbar_item.dart';
 
 class BottomNavbar extends StatelessWidget {

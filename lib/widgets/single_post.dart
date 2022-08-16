@@ -75,21 +75,21 @@ class SinglePost extends StatelessWidget {
                       children: [
                         Text(
                           "@$username",
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontSize: kSubHeaderTextSize,
-                            color: Colors.white,
+                            color: kWhiteColor,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         const SizedBox(
                           height: 10,
                         ),
-                        const Text(
+                        Text(
                           "Start with God - the first step in learning is bowing down to God; only fools thumb their noses at such wisdom and learning.",
                           style: TextStyle(
                             height: 1.4,
-                            fontSize: kSubHeaderTextSize,
-                            color: Colors.white,
+                            fontSize: kSmallTextSize,
+                            color: kWhiteColor,
                             fontWeight: FontWeight.w400,
                           ),
                         ),
@@ -203,22 +203,22 @@ class SinglePost extends StatelessWidget {
                         height: 30,
                       ),
                       Container(
-                        width: 40,
-                        height: 40,
+                        width: 50,
+                        height: 50,
                         padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(20),
+                          color: Color.fromARGB(255, 43, 40, 40),
+                          borderRadius: BorderRadius.circular(25),
                         ),
                         child: Container(
-                          height: 30,
-                          width: 30,
+                          height: 40,
+                          width: 40,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage("assets/images/girl2.jpeg"),
                               fit: BoxFit.cover,
                             ),
-                            borderRadius: BorderRadius.circular(15),
+                            borderRadius: BorderRadius.circular(20),
                           ),
                           child: const Center(
                             child: Icon(
