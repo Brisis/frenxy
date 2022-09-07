@@ -37,20 +37,24 @@ Color kWhiteColor = Colors.white;
 List<SinglePost> posts = const [
   SinglePost(
     username: "frenxy",
-    postImage: "assets/images/girl1.jpeg",
+    postVideo: "assets/video/vid1.mp4",
   ),
   SinglePost(
     username: "ben",
-    postImage: "assets/images/girl4.jpeg",
+    postVideo: "assets/video/vid2.mp4",
   ),
   SinglePost(
     username: "esykomichi",
-    postImage: "assets/images/esy.jpg",
+    postVideo: "assets/video/vid3.mp4",
   ),
-  SinglePost(
-    username: "advocate",
-    postImage: "assets/images/car.webp",
-  ),
+  // SinglePost(
+  //   username: "advocate",
+  //   postVideo: "assets/video/vid4.mp4",
+  // ),
+  // SinglePost(
+  //   username: "tiktok",
+  //   postVideo: "assets/video/vid5.mp4",
+  // ),
 ];
 
 List<PostItem> discoverPosts = [

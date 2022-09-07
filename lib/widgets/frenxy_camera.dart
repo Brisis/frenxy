@@ -89,7 +89,9 @@ class _FrenxyPostCameraState extends State<FrenxyPostCamera> {
   @override
   void dispose() {
     controller?.dispose();
-    _timer!.cancel();
+    if(_timer!= null){
+      _timer!.cancel();
+    }
     super.dispose();
   }
 

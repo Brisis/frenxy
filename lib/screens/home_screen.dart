@@ -18,6 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
         _handleCallbackEvent(event.direction, event.success);
       });
     return Scaffold(
+      backgroundColor: primaryColor,
       bottomNavigationBar: const BottomNavbar(),
       body: TikTokStyleFullPageScroller(
         contentSize: posts.length,
