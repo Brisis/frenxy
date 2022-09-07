@@ -29,7 +29,7 @@ PageTransition routeTransition(Widget screen) {
 const double kBottomNavigationPadding = 5;
 
 Color primaryColor = Colors.black;
-Color secondaryColor = Colors.red;
+Color secondaryColor = const Color(0xFFEA4359);
 Color dividerColor = Colors.grey.shade300;
 Color kTextGreyColor = Colors.black54;
 Color kWhiteColor = Colors.white;

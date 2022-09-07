@@ -74,6 +74,25 @@ class ProfilePosts extends StatelessWidget {
             ],
           ),
         ),
+        verticalSpace(height: 1),
+        SizedBox(
+          height: 150,
+          child: Row(
+            children: [
+              Expanded(
+                child: discoverPosts[0],
+              ),
+              horizontalSpace(width: 1),
+              Expanded(
+                child: discoverPosts[5],
+              ),
+              horizontalSpace(width: 1),
+              Expanded(
+                child: discoverPosts[2],
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }

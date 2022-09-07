@@ -57,31 +57,6 @@ class UserProfileScreen extends StatelessWidget {
           ),
           const ProfilePosts(),
           verticalSpace(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                children: [
-                  const Text(
-                    "Loading",
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                  horizontalSpace(),
-                  const SizedBox(
-                      height: 15,
-                      width: 15,
-                      child: CircularProgressIndicator(
-                        color: Colors.black,
-                      ))
-                ],
-              ),
-            ],
-          ),
-          verticalSpace(),
         ],
       ),
     );

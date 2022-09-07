@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frenxy/constants.dart';
+import 'package:frenxy/screens/sound/sound_screen.dart';
 import 'package:frenxy/widgets/follow_account_image.dart';
 import 'package:video_player/video_player.dart';
 
@@ -137,7 +138,7 @@ class _SinglePostState extends State<SinglePost> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                const SizedBox(
+                                verticalSpace(
                                   height: 10,
                                 ),
                                 Text(
@@ -149,26 +150,32 @@ class _SinglePostState extends State<SinglePost> {
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(
+                                verticalSpace(
                                   height: 10,
                                 ),
-                                Row(
-                                  children: [
-                                    const Icon(
-                                      Icons.music_note_sharp,
-                                      color: Colors.white,
-                                      size: 15,
-                                    ),
-                                    horizontalSpace(),
-                                    Text(
-                                      "original sound - ${widget.username}",
-                                      style: const TextStyle(
-                                        fontSize: kNormalTextSize,
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                        routeTransition(const SoundScreen()));
+                                  },
+                                  child: Row(
+                                    children: [
+                                      const Icon(
+                                        Icons.music_note_sharp,
                                         color: Colors.white,
-                                        fontWeight: FontWeight.w500,
+                                        size: 15,
                                       ),
-                                    ),
-                                  ],
+                                      horizontalSpace(),
+                                      Text(
+                                        "original sound - ${widget.username}",
+                                        style: const TextStyle(
+                                          fontSize: kNormalTextSize,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
@@ -184,16 +191,16 @@ class _SinglePostState extends State<SinglePost> {
                               ),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
-                                children: const [
-                                  Icon(
+                                children: [
+                                  const Icon(
                                     CupertinoIcons.heart_fill,
                                     color: Colors.white,
                                     size: 40,
                                   ),
-                                  SizedBox(
+                                  verticalSpace(
                                     height: 8,
                                   ),
-                                  Text(
+                                  const Text(
                                     "12.3K",
                                     style: TextStyle(
                                       fontSize: kSmallTextSize,
@@ -271,7 +278,8 @@ class _SinglePostState extends State<SinglePost> {
                                   width: 40,
                                   decoration: BoxDecoration(
                                     image: const DecorationImage(
-                                      image: AssetImage("assets/images/food.png"),
+                                      image:
+                                          AssetImage("assets/images/food.png"),
                                       fit: BoxFit.cover,
                                     ),
                                     borderRadius: BorderRadius.circular(20),

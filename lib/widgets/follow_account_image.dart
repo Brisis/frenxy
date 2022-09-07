@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:frenxy/constants.dart';
-import 'package:frenxy/screens/me/profile_screen.dart';
 import 'package:frenxy/screens/profile/user_profile_screen.dart';
 
 class FollowAccountImage extends StatelessWidget {
@@ -12,7 +11,11 @@ class FollowAccountImage extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
-            Navigator.of(context).push(routeTransition(const UserProfileScreen()));
+            Navigator.of(context).push(
+              routeTransition(
+                const UserProfileScreen(),
+              ),
+            );
           },
           child: Container(
             width: 50,
@@ -27,7 +30,7 @@ class FollowAccountImage extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        verticalSpace(
           height: 60,
         ),
         Positioned(

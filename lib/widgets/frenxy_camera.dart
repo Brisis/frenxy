@@ -39,7 +39,8 @@ class _FrenxyPostCameraState extends State<FrenxyPostCamera> {
 
   // init camera
   Future<void> _initCamera(CameraDescription description) async {
-    controller = CameraController(description, ResolutionPreset.max, enableAudio: true);
+    controller =
+        CameraController(description, ResolutionPreset.max, enableAudio: true);
 
     try {
       await controller!.initialize();
@@ -55,9 +56,11 @@ class _FrenxyPostCameraState extends State<FrenxyPostCamera> {
     final lensDirection = controller!.description.lensDirection;
     CameraDescription newDescription;
     if (lensDirection == CameraLensDirection.front) {
-      newDescription = _availableCameras!.firstWhere((description) => description.lensDirection == CameraLensDirection.back);
+      newDescription = _availableCameras!.firstWhere((description) =>
+          description.lensDirection == CameraLensDirection.back);
     } else {
-      newDescription = _availableCameras!.firstWhere((description) => description.lensDirection == CameraLensDirection.front);
+      newDescription = _availableCameras!.firstWhere((description) =>
+          description.lensDirection == CameraLensDirection.front);
     }
 
     _initCamera(newDescription);
@@ -89,7 +92,7 @@ class _FrenxyPostCameraState extends State<FrenxyPostCamera> {
   @override
   void dispose() {
     controller?.dispose();
-    if(_timer!= null){
+    if (_timer != null) {
       _timer!.cancel();
     }
     super.dispose();
